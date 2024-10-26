@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html, body, #root{
+    @apply h-full;
+  }
+  .wrapper{
+    @apply container bg-gray-200 h-full overflow-x-hidden overflow-y-auto;
+  }
+  .mainbody{
+    @apply min-h-[calc(100%-112px)] lg:mx-[100px] sm:mx-[0px] bg-white p-3 border border-x-gray-300;
+  }
+}
+
+@layer components {
+  table{
+    @apply border-collapse w-full border border-slate-500;
+  }
+  
+  thead > tr > th, tbody > tr > td, tfoot > tr > td{
+    @apply border p-1 border-slate-500;
+  }
+  
+  .btn{
+    @apply px-2 py-1 rounded border focus:ring-2 text-nowrap flex items-center;
+  }
+  .btn-primary{
+    @apply bg-blue-500 text-white border-blue-500 ring-blue-300 hover:bg-blue-400;
+  }
+  .btn-danger{
+    @apply bg-red-500 text-white border-red-500 ring-red-300 hover:bg-red-400;
+  }
+  .btn-warning{
+    @apply bg-yellow-500 text-white border-yellow-500 ring-yellow-300 hover:bg-yellow-400;
+  }
+}
+
+@layer utilities {}
